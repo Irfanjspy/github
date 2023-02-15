@@ -1,4 +1,4 @@
-
+irfan 3 rd class fello
 user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
 $ git init
 Reinitialized existing Git repository in C:/Users/user/Desktop/GitSample/.git/
