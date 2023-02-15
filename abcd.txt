@@ -1,0 +1,172 @@
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample
+$ git init
+Initialized empty Git repository in C:/Users/user/Desktop/GitSample/.git/
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+        fILE2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git add File1.txt
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fILE2.txt
+
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+        new file:   fILE2.txt
+
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git rm --cached File1.txt
+rm 'File1.txt'
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   fILE2.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git add File1.txt
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+        new file:   fILE2.txt
+
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+        new file:   fILE2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git diff
+diff --git a/File1.txt b/File1.txt
+index e56e15b..81c545e 100644
+--- a/File1.txt
++++ b/File1.txt
+@@ -1 +1 @@
+-12345
++1234
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git restore File1.txt
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git add .
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'user@DESKTOP-EILSM48.(none)')
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ get config --global user.email "irfanpathanbv6786@gmail.com"
+bash: get: command not found
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ get config --global user.email "irfanpathanbv6786@gmail.com"^C
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git config --global user.email "irfanpathanbv6786@gmail.com"
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git config --global user.name "irfanpathan"
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git commit -m "first commit"
+[master (root-commit) 4d20cbe] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 File1.txt
+ create mode 100644 fILE2.txt
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$ git log
+commit 4d20cbeea4a07dd7a5fe093017c0e4f55ebf006b (HEAD -> master)
+Author: irfanpathan <irfanpathanbv6786@gmail.com>
+Date:   Tue Feb 7 18:33:50 2023 +0530
+
+    first commit
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
+$
+
+user@DESKTOP-EILSM48 MINGW64 ~/Desktop/GitSample (master)
